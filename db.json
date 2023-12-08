@@ -1,0 +1,11 @@
+{
+    "users": [
+    {
+        "id": 1,
+        "name": "Shaik Mohammed Subhan",
+        "userName": "shiak123",
+        "email": "shaik@gmail.com",
+        "password": "shaik"
+    }
+    ]
+}
