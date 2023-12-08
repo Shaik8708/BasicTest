@@ -2,7 +2,6 @@ let signupForm = document.getElementById("signupForm");
 
 signupForm.addEventListener("submit", (ele) => {
   ele.preventDefault();
-  let userName = document.getElementById("userName").value;
   let name = document.getElementById("name").value;
   let pass = document.getElementById("password").value;
   let email = document.getElementById("email").value;
@@ -20,7 +19,6 @@ signupForm.addEventListener("submit", (ele) => {
         method: "POST",
         body: JSON.stringify({
           name: name,
-          userName: userName,
           email: email,
           password: pass,
         }),
@@ -30,8 +28,9 @@ signupForm.addEventListener("submit", (ele) => {
       })
         .then((response) => response.json())
         .then((json) => console.log(json));
+        window.location.href = "home.html"
     }else{
         console.error("email already exists");
     }
-  }, 200);
+  }, 500);
 });
