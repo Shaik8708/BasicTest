@@ -27,7 +27,6 @@ signupForm.addEventListener("submit", (ele) => {
         },
       })
         .then((response) => response.json())
-        // .then((json) => console.log(json));
         window.location.href = "home.html"
         localStorage.setItem('loggedIn',true);
     }else{

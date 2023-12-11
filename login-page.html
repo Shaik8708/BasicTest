@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,27 +9,62 @@
       href="node_modules/bootstrap/dist/css/bootstrap.css"
     />
   </head>
-  <body>
-    <div class="container mt-5">
-      <div class="card">
-        <div class="card-header">
-          <h1>Login</h1>
-        </div>
-        <div class="card-body form">
-          <form id="loginForm">
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email" />
+  <style>
+    #btn-submit:hover {
+      background-color: #d8bd8a !important;
+      border: solid 1px rgba(88, 40, 23, 0.5);
+    }
+  </style>
+  <body class="h-100">
+    <div
+      class="container-fluid d-flex align-items-center justify-content-around"
+      style="background-color: burlywood; height: 100%"
+    >
+      <div>
+        <h1 class="mt-2 mx-5">Login page</h1>
+      </div>
+      <div class="d-flex h-50">
+        <div class="vr"></div>
+      </div>
+      <div style="width: 30%" class="d-flex">
+        <div class="card w-100" style="background-color: #e4d9c3">
+          <div class="card-header">
+            <h1>Login</h1>
+          </div>
+          <div class="card-body form">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" />
+              </div>
+              <button
+                type="submit"
+                class="btn"
+                id="btn-submit"
+                style="
+                  background-color: #e4d9c3;
+                  border: solid 1px rgba(207, 129, 100, 0.5);
+                "
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+          <div class="card-footer d-flex align-items-center">
+            <div class="mx-2"></div>
+            <div>
+              Don't have an account?
+              <a
+                href="./signup-page.html"
+                style="text-decoration: none; color: rgb(186, 71, 29)"
+                >Sign-up</a
+              >
             </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password" />
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-        <div class="card-footer">
-          Don't have an account? <a href="./signup-page.html">Sign-up</a>
+          </div>
         </div>
       </div>
     </div>
@@ -37,7 +72,7 @@
       const loggedIn = localStorage.getItem("loggedIn");
       if (loggedIn) {
         window.location.href = "home.html";
-    }
+      }
     </script>
     <script src="login-page.js"></script>
   </body>

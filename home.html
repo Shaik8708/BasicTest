@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,10 +9,16 @@
       href="node_modules/bootstrap/dist/css/bootstrap.css"
     />
   </head>
-  <body>
-    <div class="container">
+  <body class="h-100">
+    <div
+      class="container-fluid d-flex align-items-center justify-content-between"
+      style="background-color: burlywood; height: 12% !important"
+    >
+      <div>
+        <h1 class="mt-2 mx-2">Home page</h1>
+      </div>
       <div class="navbar float-end">
-        <div class="signOut">
+        <div class="mx-3">
           <button
             type="button"
             class="btn btn-danger btn-sm"
@@ -22,8 +28,9 @@
           </button>
         </div>
       </div>
-      <h1 class="mt-5">Welcome user to home page</h1>
     </div>
+    <hr style="margin: auto" />
+    <div style="height: 88%"></div>
 
     <script>
       const loggedIn = localStorage.getItem("loggedIn");
