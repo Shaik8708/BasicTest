@@ -10,19 +10,26 @@ loginForm.addEventListener("submit", (ele) => {
     .then((response) => response.json())
     .then((json) => (allData = json));
 
-    setTimeout(() => {
-        let user = allData.find(user => user.email === email)
+    if(email && password){
 
-        if(user){
-            if(user.password == password){
-                window.location.href = "home.html"
-                localStorage.setItem('loggedIn',true);
-            }else{
-                alert("incorrect password")
-            }
-        }else {
-            alert("Email is not registered.")
-        }
         
-    }, 500);
+        setTimeout(() => {
+            let user = allData.find(user => user.email === email)
+            
+            if(user){
+                if(user.password == password){
+                    window.location.href = "home.html"
+                    localStorage.setItem('loggedIn',true);
+                    localStorage.setItem('email',email);
+                }else{
+                    alert("incorrect password")
+                }
+            }else {
+                alert("Email is not registered.")
+            }
+            
+        }, 500);
+    }else {
+        alert("Fill the empty fields")
+    }
 })
