@@ -27,10 +27,11 @@ signupForm.addEventListener("submit", (ele) => {
         },
       })
         .then((response) => response.json())
-        .then((json) => console.log(json));
+        // .then((json) => console.log(json));
         window.location.href = "home.html"
+        localStorage.setItem('loggedIn',true);
     }else{
-        console.error("email already exists");
+        alert("email already exists")
     }
   }, 500);
 });

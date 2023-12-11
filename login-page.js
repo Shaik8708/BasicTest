@@ -16,11 +16,12 @@ loginForm.addEventListener("submit", (ele) => {
         if(user){
             if(user.password == password){
                 window.location.href = "home.html"
+                localStorage.setItem('loggedIn',true);
             }else{
-                console.error("incorrect password");
+                alert("incorrect password")
             }
         }else {
-            console.error("email is not registered");
+            alert("Email is not registered.")
         }
         
     }, 500);

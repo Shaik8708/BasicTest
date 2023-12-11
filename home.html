@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Home Page</title>
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.css"
     />
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1 class="mt-5">Welcome user to home page</h1>
-
+      <div class="navbar float-end">
+        <div class="signOut">
+          <button
+            type="button"
+            class="btn btn-danger btn-sm"
+            onclick="signOut()"
+          >
+            Sign out
+          </button>
+        </div>
+      </div>
+      <h1 class="mt-5">Welcome user to home page</h1>
     </div>
-    
-</body>
+
+    <script>
+      const loggedIn = localStorage.getItem("loggedIn");
+      if (!loggedIn) {
+        window.location.href = "login-page.html";
+      }
+    </script>
+
+    <script src="home.js"></script>
+  </body>
 </html>
