@@ -35,6 +35,12 @@
         </div>
       </div>
     </div>
+    <script>
+        const loggedIn = localStorage.getItem("loggedIn");
+        if (loggedIn) {
+          window.location.href = "home.html";
+      }
+      </script>
     <script src="index.js"></script>
   </body>
 </html>
