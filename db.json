@@ -1,17 +1,21 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Shaik Mohammed Subhan",
-      "userName": "shiak123",
-      "email": "shaik@gmail.com",
-      "password": "shaik"
-    },
-    {
       "name": "Shaik Mohammed Subhan",
       "userName": "Shiakee",
       "email": "subhan@gmail.com",
       "password": "Subhan",
+      "age": "23",
+      "city": "bangalore",
+      "id": 1
+    },
+    {
+      "name": "BasanagoudSP",
+      "userName": "Basan",
+      "email": "basan@gmail.com",
+      "password": "Basan",
+      "age": "12",
+      "city": "asd",
       "id": 2
     }
   ]
