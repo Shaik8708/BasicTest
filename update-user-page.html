@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Update User</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+  <style>
+    #btn-submit:hover {
+      background-color: #d8bd8a !important;
+      border: solid 1px rgba(88, 40, 23, 0.5);
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+  </style>
+  <body class="h-100">
+    <div
+      class="container-fluid d-flex align-items-center justify-content-between"
+      style="background-color: burlywood; height: 12% !important"
+    >
+      <div>
+        <h1 class="mt-2 mx-2">Update page</h1>
+      </div>
+      <div class="navbar float-end">
+        <div class="mx-3">
+          <button
+            type="button"
+            class="btn btn-secondary btn-md"
+            onclick="back()"
+          >
+            Back
+          </button>
+        </div>
+      </div>
+    </div>
+    <hr style="margin: auto" />
+    <div
+      style="height: 100%; background-color: rgba(148, 92, 72, 0.5)"
+      class="d-flex align-items-baseline justify-content-center"
+    >
+      <div class="card w-50 mt-3" style="background-color: #e4d9c3">
+        <div class="card-header">
+          <h2>Update profile</h2>
+        </div>
+        <div class="card-body form">
+          <form id="updateForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" />
+            </div>
+            <div class="mb-3">
+              <label for="userName" class="form-label">Username</label>
+              <input type="text" class="form-control" id="userName" />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" disabled id="email" />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" />
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+                onclick="showPassword()"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Show Password
+              </label>
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label">Age</label>
+              <input type="number" class="form-control" id="age" />
+            </div>
+            <div class="mb-3">
+              <label for="city" class="form-label">City</label>
+              <input type="text" class="form-control" id="city" />
+            </div>
+            <button
+              type="submit"
+              class="btn"
+              id="btn-submit"
+              style="
+                background-color: #e4d9c3;
+                border: solid 1px rgba(207, 129, 100, 0.5);
+              "
+            >
+              Update
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="update-user-page.js"></script>
+  </body>
+</html>

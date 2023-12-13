@@ -11,27 +11,33 @@ signupForm.addEventListener("submit", (ele) => {
     .then((response) => response.json())
     .then((json) => (allData = json));
 
-  setTimeout(() => {
-    let user = allData.find(user => user.email === email)
+    if(name && pass && email){
 
-    if (!user) {
-      fetch("http://localhost:1212/users", {
-        method: "POST",
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          password: pass,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
-        .then((response) => response.json())
-        // .then((json) => console.log(json));
-        window.location.href = "home.html"
-        localStorage.setItem('loggedIn',true);
+        setTimeout(() => {
+          let user = allData.find(user => user.email === email)
+      
+          if (!user) {
+            fetch("http://localhost:1212/users", {
+              method: "POST",
+              body: JSON.stringify({
+                name: name,
+                email: email,
+                password: pass,
+              }),
+              headers: {
+                "Content-type": "application/json; charset=UTF-8",
+              },
+            })
+              .then((response) => response.json())
+              window.location.href = "home.html"
+              localStorage.setItem('loggedIn',true);
+              localStorage.setItem('email',email);
+          }else{
+              alert("email already exists")
+          }
+        }, 500);
     }else{
-        alert("email already exists")
+        alert("fill all the empty fields")
     }
-  }, 500);
+
 });
