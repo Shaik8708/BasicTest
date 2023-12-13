@@ -31,7 +31,7 @@ signupForm.addEventListener("submit", (ele) => {
               .then((response) => response.json())
               window.location.href = "home.html"
               localStorage.setItem('loggedIn',true);
-              localStorage.setItem('email',enail);
+              localStorage.setItem('email',email);
           }else{
               alert("email already exists")
           }
